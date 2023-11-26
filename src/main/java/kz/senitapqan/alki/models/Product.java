@@ -20,6 +20,9 @@ public class Product {
     @Column(name = "id")
     private Long id;
 
+    @Column(name = "name")
+    private String name;
+
     @Column(name = "query_id")
     private Long qid; //id
 
