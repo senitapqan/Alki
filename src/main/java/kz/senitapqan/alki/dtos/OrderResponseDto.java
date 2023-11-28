@@ -9,12 +9,12 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class OrderCreateRequestDto {
+public class OrderResponseDto {
     private Long id;
-    private String address;
-    private Long productId;
-    private String size;
+    private String name;
     private String color;
-    private Long userId;
-    private String phone;
+    private String size;
+    private String address;
+    private String status;
+    private String date;
 }

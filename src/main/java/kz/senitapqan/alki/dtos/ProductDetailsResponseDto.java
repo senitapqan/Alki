@@ -2,19 +2,18 @@ package kz.senitapqan.alki.dtos;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
 @Getter
 @Setter
 @AllArgsConstructor
-@NoArgsConstructor
-public class OrderCreateRequestDto {
+@RequiredArgsConstructor
+public class ProductDetailsResponseDto {
     private Long id;
-    private String address;
-    private Long productId;
     private String size;
     private String color;
-    private Long userId;
-    private String phone;
+    private int free;
+    private int reserved;
+    private String name;
 }

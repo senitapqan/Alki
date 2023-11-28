@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.Date;
+
 @Entity
 @Table(name = "t_orders")
 @Getter
@@ -14,9 +16,10 @@ import lombok.Setter;
 @NoArgsConstructor
 public class Order {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
+    @Column(name = "data")
+    private String date;
     @Column(name = "user_id")
     private Long user;
     @Column(name = "address")
@@ -25,10 +28,10 @@ public class Order {
     private String status;
     @Column(name = "price")
     private int price;
-
+    @Column(name = "phone")
+    private String phone;
     @ManyToOne
-    @JoinColumn(name = "product_id")
+    @JoinColumn(name = "product_detail_id")
     private ProductDetails productDetails;
-
 
 }

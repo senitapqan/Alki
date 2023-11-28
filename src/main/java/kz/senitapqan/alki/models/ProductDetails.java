@@ -30,7 +30,7 @@ public class ProductDetails {
     @Column(name = "free")
     private int free;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "product_id")
     private Product product;
 }

@@ -1,15 +1,14 @@
 package kz.senitapqan.alki.service;
 
 import kz.senitapqan.alki.dtos.ProductCreateRequestDto;
-import kz.senitapqan.alki.dtos.ProductDetailUpdateResponse;
-import kz.senitapqan.alki.dtos.ProductDetailsDto;
-import kz.senitapqan.alki.models.ProductDetails;
+import kz.senitapqan.alki.dtos.ProductResponseDto;
 
 import java.util.List;
 
 public interface ProductService {
-    public Long save(ProductCreateRequestDto productCreateRequestDto);
-    public boolean delete(Long id);
-    public boolean updatePrice(Long id, int newPrice);
-
+    public Long create(ProductCreateRequestDto productCreateRequestDto);
+    public void delete(Long id);
+    public void updatePrice(Long id, int newPrice);
+    public Long getIdByNameAndCategory(String name, String category);
+    public List<ProductResponseDto> getAllProducts();
 }
